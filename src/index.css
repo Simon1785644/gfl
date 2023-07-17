@@ -1,0 +1,175 @@
+nav a {
+  color: Bisque;
+  display: block; /* 讓 <a> 填滿 <li> */
+  font-size: 1.2rem;
+  padding: 10px;
+  text-decoration: none;  /* 移除超連結底線 */
+  font-family: 'Noto Sans CJK TC';
+}
+  
+nav > ul {
+  background-color:Chocolate;
+  list-style: none;   /* 移除項目符號 */
+  margin: 0;
+  padding: 0;
+}
+  
+/* 滑鼠移到 <a> 時變成淺底暗色 */
+nav a:hover {
+  background-color: darksalmon;
+  color: Azure;
+}
+  
+/* 選單列項目並排&所有間隔平均分配寬度 */
+.flex-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+html {
+  background-color: black;
+  font-size: 24px;
+  font-family: 'Noto Sans CJK TC';
+}
+
+body { 
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #0d0d0d;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+img {
+  display: block;
+}
+
+li {
+  color: grey;
+}
+
+p {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: CornflowerBlue;
+  text-shadow: 1px 1px 7px gray;
+}
+
+h1 {
+  color: DarkOliveGreen;
+  margin: 0;
+  padding: 20px 0;
+}
+
+h2 {
+  color: YellowGreen;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h3 {
+  color: MediumSeaGreen;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h4 {
+  color: Brown;
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h5 {
+  color: Coral;
+  font-size: .83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+h6 {
+  color: BurlyWood;
+  font-size: .67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* 使高度與螢幕高度相符，讓裡面的元素橫向且置中。 */
+.wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* 橫向排列、上下排列，使用 flex-wrap 斷行，且置中對齊。 */
+.container {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.item {
+  width: 47%;
+  margin: 1%;
+  display: flex;
+  border: 1px solid #0a232b;
+  box-shadow: 0 0 5px 2px rgba(6, 26, 32, 0.6);
+  .pic {
+    width: 60%;
+    img {
+      vertical-align: middle;
+      object-fit: cover; /* 使圖片跟容器大小一致，不支援 iE */
+    }
+  }
+
+  .text {
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* 主軸線 */
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #0987ad;
+    }
+    p {
+      color: #444;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .btn {
+      line-height: 1.5em;
+      border: 1px solid #0987ad;
+      padding: 0 10px;
+      align-self: flex-end; /* 自己靠右對齊 */
+      text-decoration: none;
+      border-radius: 100px;
+      color: #0987ad;
+      margin-top: auto; /* 自動推到最底部 */
+      &:hover {
+        background-color: #0987ad;
+        color: #fff;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
